@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    color: white;
+}
+html, body, #root, .app{
+    width: 100%;
+    height: 100%;
+}
+html{
+    font-size: 18px;
+}
+body{
+    background-color: #21262F;
+}
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    /* overflow: scroll; */
+}
+.main{
+    max-width: 800px;
+    width: 100%;
+    height: 60%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid white;
+    overflow:visible;
+}
+.left-section{
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('https://worldofprintables.com/wp-content/uploads/2023/06/Summer-Sky-Wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.location-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.left-section .temperature{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.location-logo{
+    width: 20px;
+    height: 20px;
+}
+.location{
+    display: flex;
+    align-items: center;
+}
+.day-of-the-week{
+    font-size: 30px;
+    font-weight: 700;
+}
+.date{
+    padding-bottom: 15px;
+}
+.weather-logo{
+    width: 80px;
+}
+.temperature-in-celcius{
+    font-size: 60px;
+    font-weight: 700;
+}
+.weather-condition{
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+}
+.right-section{
+    width: 50%;
+    height: 100%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #21262F;
+    border-radius: 0 50px 50px 0;
+}
+.weather-info, .weather-forecast{
+    width: 100%;
+}
+.weather-info p{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.weather-info p span{
+    font-weight: 400;
+}
+.weather-forecast{
+    display: flex;
+    flex-direction: row;
+    background-color: #323A48; /*#222831;*/
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.forecast-day{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    align-items: center;
+    justify-content:space-between;
+    width: 84.25px;
+    height: 130px;
+    border-radius: 20px;
+    background-color: #323A48;
+}
+.selected{
+    background-color: white;
+}
+.selected p{
+    color: #323A48;
+}
+.forecast-day img{
+    width: 40px;
+}
+.forecast-day .temperature{
+    font-weight: 500;
+    font-size: 20px;
+}
+.forecast-day .day{
+    font-size: 15px;
+}
+.change-location-button{
+    width: 100%;
+    background: rgb(113,233,241);
+    background: linear-gradient(90deg, rgba(113,233,241,1) 0%, rgba(101,176,237,1) 53%, rgba(85,99,230,1) 88%);
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+}
+.change-location-button img{
+    width: 20px;
+}
+.forecast-day:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: white;
+}
+.forecast-day:hover p{
+    color: #323A48;
+}
+.change-location-button:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+@media (max-width: 890px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        max-width: 700px;
+    }
+    .left-section{
+        width: 100%;
+        height: 45%;
+        border-radius: 50px 50px 0 0;
+        padding: 2rem 3rem;
+        flex-direction: row;
+    }
+    .location-info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+    .day-of-the-week{
+        font-size: 2rem;
+    }
+    .left-section .temperature{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 3rem;
+        margin-right: 2rem;
+    }
+    .temperature-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .right-section{
+        width: 100%;
+        height: 55%;
+        padding: 3rem;
+        border-radius: 0 0px 50px 50px;
+    }
+    .change-location-button{
+        width: 60%;
+        margin-top: 2rem;
+        height: 3rem;
+    }
+    .weather-forecast{
+        width: 80%;
+    }
+}
+@media(max-width: 600px){
+    .left-section{
+        padding: 2rem 2rem;
+        flex-direction: column;
+    }
+    .left-section .temperature{
+        width: 100%;
+        align-items: end;
+        margin-top: 0rem;
+        margin-right: 0;
+    }
+    .left-section .temperature .temperature-in-celcius{
+        font-size: 2.7rem;
+    }
+    .change-location-button{
+        width: 100%;
+        margin-top: 2rem;
+        height: 3rem;
+    }
+    .location-info{
+        width: 100%;
+    }
+
+}
+@media (max-width: 500px){
+    .main{
+        margin: 0;
+        height: 100%;
+        border-radius: 0;
+        height: 100%;
+        border: none;
+    }
+    .left-section{
+        border-radius: 0;
+    }
+    .right-section{
+        padding: 3rem 2rem 2rem 2rem;
+        border-radius: 0;
+    }
+    .location{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 350px){
+    .left-section{
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+    .weather-forecast{
+        justify-content: center;
+    }
+    .change-location-button{
+        font-size: 0.8rem;
+    }
+}
