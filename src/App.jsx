@@ -27,7 +27,7 @@ export default function App(){
 
     async function getUsersLocation(){
         try{
-            const response = await fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=4e61a3b6d3714094b1d7007b889ee178", {method: 'GET'})
+            const response = await fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=APIKEY", {method: 'GET'})
             const data = await response.json();
             return (`${data.city.name}, ${data.country.name}`);
         }
@@ -37,7 +37,7 @@ export default function App(){
     };
     async function getForecastData(city){
         try{
-            const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=1c0e7244338f41bcb5a153044231807&q=${city}&days=4&aqi=no&alerts=no`);
+            const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=APIKEY&q=${city}&days=4&aqi=no&alerts=no`);
             const data = await response.json();
             return data;
         }
