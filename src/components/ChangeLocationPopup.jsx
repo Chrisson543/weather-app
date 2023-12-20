@@ -7,7 +7,7 @@ import closeIcon from '../assets/close.png';
 export default function ChangeLocationPopup(props){
 
     async function search(text){
-        const response = await fetch(`https://api.weatherapi.com/v1/search.json?key=1c0e7244338f41bcb5a153044231807&q=${text}`);
+        const response = await fetch(`https://api.weatherapi.com/v1/search.json?key=APIKEY&q=${text}`);
         const data = await response.json();
         return data;
     };
